@@ -1,0 +1,7 @@
+sch2vhdl -intstyle ise -family virtex2p -flat -suppress -w "C:/Documents and Settings/student/Desktop/ids/dropfifo.sch" dropfifo.vhf
+sch2vhdl -intstyle ise -family virtex2p -flat -suppress -w "C:/Documents and Settings/student/Desktop/ids/dropfifo.sch" dropfifo.vhf
+sch2vhdl -intstyle ise -family virtex2p -flat -suppress -w "C:/Documents and Settings/student/Desktop/ids/dropfifo.sch" dropfifo.vhf
+sch2vhdl -intstyle ise -family virtex2p -flat -suppress -w "C:/Documents and Settings/student/Desktop/ids/dropfifo.sch" dropfifo.vhf
+sch2vhdl -intstyle ise -family virtex2p -flat -suppress -w "C:/Documents and Settings/student/Desktop/ids/dropfifo.sch" dropfifo.vhf
+sch2verilog -intstyle ise -family virtex2p   -w "C:/Documents and Settings/student/Desktop/ids/dropfifo.sch" dropfifo.vf
+sch2verilog -intstyle ise -family virtex2p   -w "C:/Documents and Settings/student/Desktop/ids/dropfifo.sch" dropfifo.vf

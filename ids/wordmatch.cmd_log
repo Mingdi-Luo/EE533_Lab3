@@ -1,0 +1,3 @@
+sch2vhdl -intstyle ise -family virtex2p -flat -suppress -w "C:/Documents and Settings/student/Desktop/ids/wordmatch.sch" wordmatch.vhf
+sch2verilog -intstyle ise -family virtex2p   -w "C:/Documents and Settings/student/Desktop/ids/wordmatch.sch" wordmatch.vf
+sch2verilog -intstyle ise -family virtex2p   -w "C:/Documents and Settings/student/Desktop/ids/wordmatch.sch" wordmatch.vf

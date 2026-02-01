@@ -1,0 +1,495 @@
+VERSION 6
+BEGIN SCHEMATIC
+    BEGIN ATTR DeviceFamilyName "virtex2p"
+        DELETE all:0
+        EDITNAME all:0
+        EDITTRAIT all:0
+    END ATTR
+    BEGIN NETLIST
+        SIGNAL firstword
+        SIGNAL lastword
+        SIGNAL XLXN_3(7:0)
+        SIGNAL clk
+        SIGNAL XLXN_5
+        SIGNAL XLXN_6
+        SIGNAL XLXN_7
+        SIGNAL XLXN_8
+        SIGNAL XLXN_9
+        SIGNAL XLXN_10
+        SIGNAL XLXN_11
+        SIGNAL XLXN_12
+        SIGNAL fifowrite
+        SIGNAL XLXN_14
+        SIGNAL drop_pkt
+        SIGNAL rst
+        SIGNAL XLXN_17
+        SIGNAL XLXN_18
+        SIGNAL XLXN_19
+        SIGNAL XLXN_20
+        SIGNAL XLXN_21
+        SIGNAL XLXN_23(7:0)
+        SIGNAL XLXN_24(7:0)
+        SIGNAL XLXN_25
+        SIGNAL XLXN_26(71:0)
+        SIGNAL XLXN_27(7:0)
+        SIGNAL XLXN_34
+        SIGNAL XLXN_36(7:0)
+        SIGNAL XLXN_41
+        SIGNAL XLXN_42
+        SIGNAL fiforead
+        SIGNAL XLXN_45
+        SIGNAL XLXN_46
+        SIGNAL XLXN_47
+        SIGNAL valid_data
+        SIGNAL in_fifo(71:0)
+        SIGNAL XLXN_50
+        SIGNAL XLXN_52(71:0)
+        SIGNAL XLXN_53
+        SIGNAL XLXN_54(7:0)
+        SIGNAL out_fifo(71:0)
+        PORT Input firstword
+        PORT Input lastword
+        PORT Input clk
+        PORT Input fifowrite
+        PORT Input drop_pkt
+        PORT Input rst
+        PORT Input fiforead
+        PORT Output valid_data
+        PORT Input in_fifo(71:0)
+        PORT Output out_fifo(71:0)
+        BEGIN BLOCKDEF fd
+            TIMESTAMP 2000 1 1 10 10 10
+            RECTANGLE N 64 -320 320 -64 
+            LINE N 0 -128 64 -128 
+            LINE N 0 -256 64 -256 
+            LINE N 384 -256 320 -256 
+            LINE N 80 -128 64 -144 
+            LINE N 64 -112 80 -128 
+        END BLOCKDEF
+        BEGIN BLOCKDEF fd8ce
+            TIMESTAMP 2000 1 1 10 10 10
+            LINE N 0 -128 64 -128 
+            LINE N 0 -192 64 -192 
+            LINE N 0 -32 64 -32 
+            LINE N 0 -256 64 -256 
+            LINE N 384 -256 320 -256 
+            LINE N 192 -32 64 -32 
+            LINE N 192 -64 192 -32 
+            LINE N 80 -128 64 -144 
+            LINE N 64 -112 80 -128 
+            RECTANGLE N 320 -268 384 -244 
+            RECTANGLE N 0 -268 64 -244 
+            RECTANGLE N 64 -320 320 -64 
+        END BLOCKDEF
+        BEGIN BLOCKDEF comp8
+            TIMESTAMP 2000 1 1 10 10 10
+            RECTANGLE N 64 -384 320 -64 
+            LINE N 384 -224 320 -224 
+            RECTANGLE N 0 -332 64 -308 
+            LINE N 0 -320 64 -320 
+            RECTANGLE N 0 -140 64 -116 
+            LINE N 0 -128 64 -128 
+        END BLOCKDEF
+        BEGIN BLOCKDEF cb8ce
+            TIMESTAMP 2000 1 1 10 10 10
+            LINE N 384 -128 320 -128 
+            RECTANGLE N 320 -268 384 -244 
+            LINE N 384 -256 320 -256 
+            LINE N 0 -192 64 -192 
+            LINE N 192 -32 64 -32 
+            LINE N 192 -64 192 -32 
+            LINE N 80 -128 64 -144 
+            LINE N 64 -112 80 -128 
+            LINE N 0 -128 64 -128 
+            LINE N 0 -32 64 -32 
+            LINE N 384 -192 320 -192 
+            RECTANGLE N 64 -320 320 -64 
+        END BLOCKDEF
+        BEGIN BLOCKDEF reg9B
+            TIMESTAMP 2026 1 30 22 52 43
+            RECTANGLE N 64 -256 320 0 
+            LINE N 64 -224 0 -224 
+            LINE N 64 -160 0 -160 
+            LINE N 64 -96 0 -96 
+            RECTANGLE N 0 -44 64 -20 
+            LINE N 64 -32 0 -32 
+            RECTANGLE N 320 -236 384 -212 
+            LINE N 320 -224 384 -224 
+        END BLOCKDEF
+        BEGIN BLOCKDEF cb8cle
+            TIMESTAMP 2000 1 1 10 10 10
+            RECTANGLE N 64 -448 320 -64 
+            LINE N 0 -192 64 -192 
+            LINE N 192 -32 64 -32 
+            LINE N 192 -64 192 -32 
+            LINE N 80 -128 64 -144 
+            LINE N 64 -112 80 -128 
+            LINE N 0 -128 64 -128 
+            LINE N 0 -32 64 -32 
+            LINE N 0 -256 64 -256 
+            LINE N 0 -384 64 -384 
+            RECTANGLE N 0 -396 64 -372 
+            LINE N 384 -384 320 -384 
+            LINE N 384 -192 320 -192 
+            RECTANGLE N 320 -396 384 -372 
+            LINE N 384 -128 320 -128 
+        END BLOCKDEF
+        BEGIN BLOCKDEF fdc
+            TIMESTAMP 2000 1 1 10 10 10
+            LINE N 0 -128 64 -128 
+            LINE N 0 -32 64 -32 
+            LINE N 0 -256 64 -256 
+            LINE N 384 -256 320 -256 
+            RECTANGLE N 64 -320 320 -64 
+            LINE N 64 -112 80 -128 
+            LINE N 80 -128 64 -144 
+            LINE N 192 -64 192 -32 
+            LINE N 192 -32 64 -32 
+        END BLOCKDEF
+        BEGIN BLOCKDEF vcc
+            TIMESTAMP 2000 1 1 10 10 10
+            LINE N 64 -32 64 -64 
+            LINE N 64 0 64 -32 
+            LINE N 96 -64 32 -64 
+        END BLOCKDEF
+        BEGIN BLOCKDEF or2
+            TIMESTAMP 2000 1 1 10 10 10
+            LINE N 0 -64 64 -64 
+            LINE N 0 -128 64 -128 
+            LINE N 256 -96 192 -96 
+            ARC N 28 -224 204 -48 112 -48 192 -96 
+            ARC N -40 -152 72 -40 48 -48 48 -144 
+            LINE N 112 -144 48 -144 
+            ARC N 28 -144 204 32 192 -96 112 -144 
+            LINE N 112 -48 48 -48 
+        END BLOCKDEF
+        BEGIN BLOCKDEF and2b1
+            TIMESTAMP 2000 1 1 10 10 10
+            LINE N 64 -48 64 -144 
+            LINE N 64 -144 144 -144 
+            LINE N 144 -48 64 -48 
+            ARC N 96 -144 192 -48 144 -48 144 -144 
+            LINE N 256 -96 192 -96 
+            LINE N 0 -128 64 -128 
+            LINE N 0 -64 40 -64 
+            CIRCLE N 40 -76 64 -52 
+        END BLOCKDEF
+        BEGIN BLOCKDEF and3b2
+            TIMESTAMP 2000 1 1 10 10 10
+            LINE N 0 -64 40 -64 
+            CIRCLE N 40 -76 64 -52 
+            LINE N 0 -128 40 -128 
+            CIRCLE N 40 -140 64 -116 
+            LINE N 0 -192 64 -192 
+            LINE N 256 -128 192 -128 
+            LINE N 64 -64 64 -192 
+            ARC N 96 -176 192 -80 144 -80 144 -176 
+            LINE N 144 -80 64 -80 
+            LINE N 64 -176 144 -176 
+        END BLOCKDEF
+        BEGIN BLOCKDEF dualportgate9B
+            TIMESTAMP 2026 1 31 1 27 41
+            RECTANGLE N 32 0 256 496 
+            BEGIN LINE W 0 48 32 48 
+            END LINE
+            BEGIN LINE W 0 80 32 80 
+            END LINE
+            LINE N 0 112 32 112 
+            LINE N 0 240 32 240 
+            BEGIN LINE W 0 272 32 272 
+            END LINE
+            LINE N 0 464 32 464 
+            BEGIN LINE W 256 272 288 272 
+            END LINE
+        END BLOCKDEF
+        BEGIN BLOCK XLXI_1 fd
+            PIN C clk
+            PIN D firstword
+            PIN Q XLXN_10
+        END BLOCK
+        BEGIN BLOCK XLXI_2 fd
+            PIN C clk
+            PIN D lastword
+            PIN Q XLXN_11
+        END BLOCK
+        BEGIN BLOCK XLXI_3 fd
+            PIN C clk
+            PIN D fifowrite
+            PIN Q XLXN_53
+        END BLOCK
+        BEGIN BLOCK XLXI_4 fd8ce
+            PIN C clk
+            PIN CE XLXN_47
+            PIN CLR rst
+            PIN D(7:0) XLXN_27(7:0)
+            PIN Q(7:0) XLXN_36(7:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_5 comp8
+            PIN A(7:0) XLXN_27(7:0)
+            PIN B(7:0) XLXN_23(7:0)
+            PIN EQ XLXN_41
+        END BLOCK
+        BEGIN BLOCK XLXI_7 fd
+            PIN C clk
+            PIN D drop_pkt
+            PIN Q XLXN_21
+        END BLOCK
+        BEGIN BLOCK XLXI_8 cb8ce
+            PIN C clk
+            PIN CE XLXN_45
+            PIN CLR rst
+            PIN CEO
+            PIN Q(7:0) XLXN_23(7:0)
+            PIN TC
+        END BLOCK
+        BEGIN BLOCK XLXI_10 reg9B
+            PIN ce XLXN_5
+            PIN clk clk
+            PIN clr rst
+            PIN d(71:0) in_fifo(71:0)
+            PIN q(71:0) XLXN_26(71:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_11 cb8cle
+            PIN C clk
+            PIN CE XLXN_53
+            PIN CLR rst
+            PIN D(7:0) XLXN_36(7:0)
+            PIN L XLXN_21
+            PIN CEO
+            PIN Q(7:0) XLXN_27(7:0)
+            PIN TC
+        END BLOCK
+        BEGIN BLOCK XLXI_12 fdc
+            PIN C clk
+            PIN CLR rst
+            PIN D XLXN_45
+            PIN Q valid_data
+        END BLOCK
+        BEGIN BLOCK XLXI_13 vcc
+            PIN P XLXN_5
+        END BLOCK
+        BEGIN BLOCK XLXI_14 or2
+            PIN I0 XLXN_11
+            PIN I1 XLXN_10
+            PIN O XLXN_20
+        END BLOCK
+        BEGIN BLOCK XLXI_15 and2b1
+            PIN I0 XLXN_21
+            PIN I1 XLXN_20
+            PIN O XLXN_47
+        END BLOCK
+        BEGIN BLOCK XLXI_16 and3b2
+            PIN I0 XLXN_41
+            PIN I1 XLXN_42
+            PIN I2 fiforead
+            PIN O XLXN_45
+        END BLOCK
+        BEGIN BLOCK XLXI_6 comp8
+            PIN A(7:0) XLXN_23(7:0)
+            PIN B(7:0) XLXN_36(7:0)
+            PIN EQ XLXN_42
+        END BLOCK
+        BEGIN BLOCK XLXI_19 dualportgate9B
+            PIN addra(7:0) XLXN_27(7:0)
+            PIN dina(71:0) XLXN_26(71:0)
+            PIN wea XLXN_53
+            PIN clka clk
+            PIN addrb(7:0) XLXN_23(7:0)
+            PIN clkb clk
+            PIN doutb(71:0) out_fifo(71:0)
+        END BLOCK
+    END NETLIST
+    BEGIN SHEET 1 3520 2720
+        INSTANCE XLXI_1 336 400 R0
+        INSTANCE XLXI_2 336 720 R0
+        INSTANCE XLXI_4 336 1040 R0
+        INSTANCE XLXI_5 896 1264 R0
+        INSTANCE XLXI_8 1920 1536 R0
+        BEGIN INSTANCE XLXI_10 1920 256 M180
+        END INSTANCE
+        INSTANCE XLXI_11 1920 1072 R0
+        INSTANCE XLXI_12 1920 1920 R0
+        INSTANCE XLXI_7 336 2000 R0
+        BEGIN BRANCH firstword
+            WIRE 160 144 336 144
+        END BRANCH
+        BEGIN BRANCH lastword
+            WIRE 160 464 336 464
+        END BRANCH
+        BEGIN BRANCH clk
+            WIRE 160 1872 240 1872
+            WIRE 240 1872 336 1872
+            WIRE 240 272 336 272
+            WIRE 240 272 240 368
+            WIRE 240 368 800 368
+            WIRE 800 368 800 432
+            WIRE 800 432 976 432
+            WIRE 240 368 240 592
+            WIRE 240 592 336 592
+            WIRE 240 592 240 912
+            WIRE 240 912 336 912
+            WIRE 240 912 240 1872
+            WIRE 800 160 800 368
+            WIRE 800 160 1888 160
+            WIRE 1888 160 1888 416
+            WIRE 1888 416 1920 416
+            WIRE 1888 416 1888 944
+            WIRE 1888 944 1920 944
+            WIRE 1888 944 1888 1120
+            WIRE 1888 1120 1888 1408
+            WIRE 1888 1408 1920 1408
+            WIRE 1888 1408 1888 1792
+            WIRE 1888 1792 1920 1792
+            WIRE 1888 1120 2560 1120
+            WIRE 2560 1120 2688 1120
+            WIRE 2560 1120 2560 1344
+            WIRE 2560 1344 2688 1344
+        END BRANCH
+        BEGIN BRANCH XLXN_5
+            WIRE 1808 480 1920 480
+        END BRANCH
+        INSTANCE XLXI_14 800 688 R0
+        BEGIN BRANCH XLXN_10
+            WIRE 720 144 768 144
+            WIRE 768 144 768 560
+            WIRE 768 560 800 560
+        END BRANCH
+        BEGIN BRANCH XLXN_11
+            WIRE 720 464 736 464
+            WIRE 736 464 736 624
+            WIRE 736 624 800 624
+        END BRANCH
+        INSTANCE XLXI_3 976 560 R0
+        BEGIN BRANCH fifowrite
+            WIRE 944 304 976 304
+        END BRANCH
+        IOMARKER 944 304 fifowrite R180 28
+        IOMARKER 160 1872 clk R180 28
+        BEGIN BRANCH drop_pkt
+            WIRE 160 1744 336 1744
+        END BRANCH
+        IOMARKER 160 1744 drop_pkt R180 28
+        BEGIN BRANCH rst
+            WIRE 160 1008 272 1008
+            WIRE 272 1008 336 1008
+            WIRE 272 1008 272 2000
+            WIRE 272 2000 1840 2000
+            WIRE 1840 352 1840 1040
+            WIRE 1840 1040 1920 1040
+            WIRE 1840 1040 1840 1504
+            WIRE 1840 1504 1920 1504
+            WIRE 1840 1504 1840 1888
+            WIRE 1840 1888 1920 1888
+            WIRE 1840 1888 1840 2000
+            WIRE 1840 352 1920 352
+        END BRANCH
+        IOMARKER 160 144 firstword R180 28
+        IOMARKER 160 464 lastword R180 28
+        IOMARKER 160 1008 rst R180 28
+        BEGIN BRANCH XLXN_23(7:0)
+            WIRE 880 1136 896 1136
+            WIRE 880 1136 880 1232
+            WIRE 880 1232 880 1344
+            WIRE 880 1344 896 1344
+            WIRE 880 1232 1520 1232
+            WIRE 1520 1152 2400 1152
+            WIRE 2400 1152 2688 1152
+            WIRE 2400 1152 2400 1280
+            WIRE 1520 1152 1520 1232
+            WIRE 2304 1280 2400 1280
+        END BRANCH
+        BEGIN BRANCH XLXN_26(71:0)
+            WIRE 2304 480 2400 480
+            WIRE 2400 480 2400 960
+            WIRE 2400 960 2688 960
+        END BRANCH
+        BEGIN BRANCH XLXN_36(7:0)
+            WIRE 720 784 752 784
+            WIRE 752 784 752 1536
+            WIRE 752 1536 896 1536
+            WIRE 752 784 1584 784
+            WIRE 1584 688 1584 784
+            WIRE 1584 688 1920 688
+        END BRANCH
+        BEGIN BRANCH XLXN_20
+            WIRE 1056 592 1088 592
+        END BRANCH
+        INSTANCE XLXI_15 1088 720 R0
+        BEGIN BRANCH XLXN_21
+            WIRE 720 1744 848 1744
+            WIRE 848 656 1088 656
+            WIRE 848 656 848 816
+            WIRE 848 816 1920 816
+            WIRE 848 816 848 1744
+        END BRANCH
+        INSTANCE XLXI_16 1360 1312 M180
+        BEGIN BRANCH XLXN_41
+            WIRE 1280 1040 1312 1040
+            WIRE 1312 1040 1312 1376
+            WIRE 1312 1376 1360 1376
+        END BRANCH
+        BEGIN BRANCH XLXN_42
+            WIRE 1280 1440 1360 1440
+        END BRANCH
+        INSTANCE XLXI_6 896 1664 R0
+        BEGIN BRANCH fiforead
+            WIRE 1232 1760 1312 1760
+            WIRE 1312 1504 1360 1504
+            WIRE 1312 1504 1312 1760
+        END BRANCH
+        IOMARKER 1232 1760 fiforead R180 28
+        BEGIN BRANCH XLXN_45
+            WIRE 1616 1440 1760 1440
+            WIRE 1760 1440 1760 1664
+            WIRE 1760 1664 1920 1664
+            WIRE 1760 1344 1760 1440
+            WIRE 1760 1344 1920 1344
+        END BRANCH
+        BEGIN BRANCH XLXN_47
+            WIRE 272 688 272 848
+            WIRE 272 848 336 848
+            WIRE 272 688 1440 688
+            WIRE 1344 624 1440 624
+            WIRE 1440 624 1440 688
+        END BRANCH
+        BEGIN BRANCH valid_data
+            WIRE 2304 1664 2336 1664
+        END BRANCH
+        IOMARKER 2336 1664 valid_data R0 28
+        BEGIN BRANCH in_fifo(71:0)
+            WIRE 1840 288 1920 288
+        END BRANCH
+        IOMARKER 1840 288 in_fifo(71:0) R180 28
+        INSTANCE XLXI_13 1808 544 R270
+        BEGIN INSTANCE XLXI_19 2688 880 R0
+        END INSTANCE
+        BEGIN BRANCH XLXN_27(7:0)
+            WIRE 304 784 336 784
+            WIRE 304 784 304 1072
+            WIRE 304 1072 800 1072
+            WIRE 800 720 800 944
+            WIRE 800 944 896 944
+            WIRE 800 944 800 1072
+            WIRE 800 720 1520 720
+            WIRE 1520 560 2480 560
+            WIRE 2480 560 2480 688
+            WIRE 2480 688 2480 928
+            WIRE 2480 928 2688 928
+            WIRE 1520 560 1520 720
+            WIRE 2304 688 2480 688
+        END BRANCH
+        BEGIN BRANCH XLXN_53
+            WIRE 1360 304 1632 304
+            WIRE 1632 304 1632 880
+            WIRE 1632 880 1632 1088
+            WIRE 1632 1088 2592 1088
+            WIRE 1632 880 1920 880
+            WIRE 2592 992 2688 992
+            WIRE 2592 992 2592 1088
+        END BRANCH
+        BEGIN BRANCH out_fifo(71:0)
+            WIRE 2976 1152 3040 1152
+        END BRANCH
+        IOMARKER 3040 1152 out_fifo(71:0) R0 28
+    END SHEET
+END SCHEMATIC
